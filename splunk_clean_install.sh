@@ -6,8 +6,9 @@ DL_PATH="/tmp/$FILENAME"
 INSTALL_DIR="/opt"
 INSTALLED_PATH="$INSTALL_DIR/splunk"
 SPLUNK_USER="splunk"
+SPLUNK_USER_HOME="/home/$SPLUNK_USER"
 
-if ! [[ -e "/home/$SPLUNK_USER" ]]; then
+if ! [[ -e $SPLUNK_USER_HOME ]]; then
 	echo "A user '$SPLUNK_USER' needs to exist on the system!!!"
 	return 0
 fi
