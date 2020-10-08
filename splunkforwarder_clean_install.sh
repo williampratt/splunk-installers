@@ -6,15 +6,13 @@ DL_PATH="/tmp/$FILENAME"
 INSTALL_DIR="/opt"
 SPLUNK_HOME="$INSTALL_DIR/splunkforwarder"
 SPLUNK_USER="splunk"
-SPLUNK_USER_HOME="/home/$SPLUNK_USER"
 SYSTEMD_MANAGED=0
 BOOT_START="$SPLUNK_HOME/bin/splunk enable boot-start -systemd-managed $SYSTEMD_MANAGED -user $SPLUNK_USER"
 
-if ! [[ -e $SPLUNK_USER_HOME ]]; then
+if ! id $SPLUNK_USER &> /dev/null; then
 	echo "A user '$SPLUNK_USER' needs to exist on the system!!!"
 	return 0
 fi
-
 
 # In case splunk is already installed and running, shut it down before removing it (if it's installed and not running nbd)
 if [[ -e $SPLUNK_HOME ]]; then
