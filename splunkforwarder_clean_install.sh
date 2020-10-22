@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-WGET_URL="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.0.6&product=universalforwarder&filename=splunkforwarder-8.0.6-152fb4b2bb96-Linux-x86_64.tgz&wget=true"
-FILENAME="splunkforwarder-8.0.6-152fb4b2bb96-Linux-x86_64.tgz"
+WGET_URL="wget -O splunkforwarder-8.1.0-f57c09e87251-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.0&product=universalforwarder&filename=splunkforwarder-8.1.0-f57c09e87251-Linux-x86_64.tgz&wget=true'"
+FILENAME="splunkforwarder-8.1.0-f57c09e87251-Linux-x86_64.tgz"
 DL_PATH="/tmp/$FILENAME"
 INSTALL_DIR="/opt"
 SPLUNK_HOME="$INSTALL_DIR/splunkforwarder"
