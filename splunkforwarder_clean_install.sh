@@ -39,7 +39,7 @@ rm -rf $DL_PATH
 # start splunk and accept the license. It will prompt you for the admin name and password
 echo "Starting Splunk..."
 
-su $SPLUNK_USER -c "$SPLUNK_HOME/bin/splunk start --accept-license"
+su $SPLUNK_USER -c "$SPLUNK_HOME/bin/splunk start --accept-license  --answer-yes"
 
 echo "Stopping Splunk To Enable Boot Start..."
 

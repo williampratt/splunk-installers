@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-WGET_URL="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.0.6&product=splunk&filename=splunk-8.0.6-152fb4b2bb96-Linux-x86_64.tgz&wget=true"
-FILENAME="splunk-8.0.6-152fb4b2bb96-Linux-x86_64.tgz"
+WGET_URL="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.0&product=splunk&filename=splunk-8.1.0-f57c09e87251-Linux-x86_64.tgz&wget=true"
+FILENAME="splunk-8.1.0-f57c09e87251-Linux-x86_64.tgz"
 DL_PATH="/tmp/$FILENAME"
 INSTALL_DIR="/opt"
 SPLUNK_HOME="$INSTALL_DIR/splunk"
@@ -39,7 +39,7 @@ rm -rf $DL_PATH
 # start splunk and accept the license. It will prompt you for the admin name and password
 echo "Starting Splunk..."
 
-su $SPLUNK_USER -c "$SPLUNK_HOME/bin/splunk start --accept-license"
+su $SPLUNK_USER -c "$SPLUNK_HOME/bin/splunk start --accept-license --answer-yes"
 
 echo "Stopping Splunk To Enable Boot Start..."
 
