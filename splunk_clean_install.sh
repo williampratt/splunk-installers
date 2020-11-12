@@ -30,7 +30,7 @@ fi
 echo "Installing Splunk..."
 wget -O $DL_PATH $WGET_URL
 
-cd $INSTALL_DIR && tar -zxvf $DL_PATH
+tar -zxf $DL_PATH -C $INSTALL_DIR
 
 chown -R $SPLUNK_USER:$SPLUNK_USER $SPLUNK_HOME
 
@@ -52,8 +52,5 @@ $BOOT_START
 echo "Starting Splunk..."
 
 su $SPLUNK_USER -c "$SPLUNK_HOME/bin/splunk start"
-
-#get back to our home dir
-cd ~
 
 echo "All Done!!!"
