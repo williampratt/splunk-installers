@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-WGET_URL="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=splunk&filename=splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true"
-FILENAME="splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz"
+WGET_URL="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.1&product=splunk&filename=splunk-8.2.1-ddff1c41e5cf-Linux-x86_64.tgz&wget=true"
+FILENAME="splunk-8.2.1-ddff1c41e5cf-Linux-x86_64.tgz"
 DL_PATH="/tmp/$FILENAME"
 INSTALL_DIR="/opt"
 SPLUNK_HOME="$INSTALL_DIR/splunk"
